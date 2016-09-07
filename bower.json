@@ -1,6 +1,7 @@
 {
-  "name": "Croppie",
+  "name": "tefdos-Croppie",
   "homepage": "https://github.com/Foliotek/Croppie",
+  "version": "2.3.1",
   "authors": [
     "Dustin Smith <thedustinsmith@gmail.com>",
     "Ethan Calvert <calvert1591@gmail.com>"

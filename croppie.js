@@ -131,9 +131,9 @@
             });
         } else {
             prom = new Promise(function (resolve, reject) {
-                if (src.substring(0,4).toLowerCase() === 'http') {
+                /*if (src.substring(0,4).toLowerCase() === 'http') {
                     img.setAttribute('crossOrigin', 'anonymous');
-                }
+                }*/
                 img.onload = function () {
                     setTimeout(function () {
                         resolve(img);

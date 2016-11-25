@@ -131,9 +131,14 @@
             });
         } else {
             prom = new Promise(function (resolve, reject) {
-                /*if (src.substring(0,4).toLowerCase() === 'http') {
+                // resolves problem in chrome - tainted canvas; creates cors problem in safari
+                if (src.substring(0,4).toLowerCase() === 'http') {
                     img.setAttribute('crossOrigin', 'anonymous');
-                }*/
+                }
+                // solves problem in safari
+                if(src.substring(0,4).toLowerCase() === 'data'){
+                    img.removeAttribute('crossOrigin');
+                }
                 img.onload = function () {
                     setTimeout(function () {
                         resolve(img);
